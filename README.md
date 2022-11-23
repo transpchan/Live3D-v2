@@ -14,8 +14,6 @@ CoNR with Attention: An Incremental Improvement for Anime Character Animation
 
 <i>2022/08</i> @transpchan was kicked out from the authors of  [Live3Dv1](https://github.com/transpchan/Live3D) as I refused to continue submittion after seeing the [heart-breaking reviews](https://github.com/transpchan/Live3D) from ECCV22. 
 
-Further submission of Live3Dv1 will be done by former coauthors alone. Although our collaboration is broken, I still wish them good luck.
-
 **Good news is that the author position of v2 and future versions are open again! Please contact me if you are willing to help me cover them in academic journals or conferences.**
 
 <i>2022/10</i> Live3Dv2 is released. Changes are (1) dropping the ResNet50 encoder. (2) adding self-attention to the U-Net (3) tuning the hyper-parms of the networks
