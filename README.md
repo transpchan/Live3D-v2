@@ -16,7 +16,9 @@ CoNR with Attention: An Incremental Improvement for Anime Character Animation
 
 <i>2022/10</i> Live3Dv2 is released. Changes are (1) dropping the ResNet50 encoder and replace it with tuned encoder. (2) adding self-attention to the U-Net (3) tuning the hyper-parms of the networks
 
+<i>2022/11</i> Weight file for Live3Dv2 is released. 
 
+<i>2022/11</i> Stay tuned for [Live3D v3](https://github.com/transpchan/Live3D-v3)
 ### Try it yourself!
 
 
