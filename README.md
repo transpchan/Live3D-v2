@@ -7,7 +7,8 @@ CoNR with Attention: An Incremental Improvement for Anime Character Animation
 [Email](mailto:transpchan@gmail.com) |
 [Discord](https://discord.gg/Md3cykbn36) |
 [Twitter](https://twitter.com/transpchan) |
-[Bilibili](https://space.bilibili.com/6418569)
+[Bilibili](https://space.bilibili.com/6418569) |
+[Zhihu](https://zhuanlan.zhihu.com/p/565391665)
 
 ### Project history
 
