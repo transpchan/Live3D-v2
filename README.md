@@ -17,7 +17,7 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 
 **Call for Authors/Contributors: Please contact me if you are willing to be the author of the paper of v2 and future versions, if you are familiar with academic journals or conferences.  Pull requests are also welcome!!**
 
-<i>2022/10</i> Live3Dv2 is released. Changes are (1) dropping the ResNet50 encoder. (2) adding self-attention to the U-Net (3) tuning the hyper-parms of the networks
+<i>2022/10</i> Live3Dv2 is released. Changes are (1) dropping the ResNet50 encoder (2) adding self-attention to the U-Net (3) tuning the hyper-parameters of the networks.
 
 <i>2022/11</i> Weight file for Live3Dv2 is released. 
 
