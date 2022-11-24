@@ -1,6 +1,6 @@
-# Live3D v2 (CoNR with Attention) 
+# Live3D v2 (AttNR ) 
 
-CoNR with Attention: An Incremental Improvement for Anime Character Animation
+Neural Rendering with Attention: An Incremental Improvement for Anime Character Animation
 
 [Draft] | 
 [Code](https://github.com/transpchan/Live3D-v2/) |
