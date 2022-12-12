@@ -1,4 +1,4 @@
-# Live3D v2 (AttNR ) 
+# Live3D v2.1 (AttNR) 
 
 Neural Rendering with Attention: An Incremental Improvement for Anime Character Animation
 
@@ -22,6 +22,8 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 <i>2022/11</i> Weight file for Live3Dv2 is released. 
 
 <i>2022/11</i> Stay tuned for [Live3D v3](https://github.com/transpchan/Live3D-v3)
+
+<i>2022/12</i> Weight file for Live3Dv2.1 is released. 
 ### Try it yourself!
 
 

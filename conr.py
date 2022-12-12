@@ -102,11 +102,16 @@ class CoNR():
                 self.parser_ckpt = pred["parser"]
 
             pred = self.pose_parser_sc_forward(data, pred)
-            pred = self.shader_forward(data, pred)
+            for stage in range(1, -1, -1):
+                pred = self.shader_forward(data, pred, stage=stage)
         return pred
 
-    def shader_forward(self, data, pred):
-        shader_stage = "shader"
+    def shader_forward(self, data, pred, stage=0):
+        if stage == 0:
+            shader_stage = "shader"
+        else:
+            shader_stage = "shader_{}".format(stage)
+        shader_stage_last = "shader_{}".format(stage+1)
         pred[shader_stage] = {}
         shader_target_sudp = pred["pose_parser"]["pred"][:, 0:3, :,
                                                          :] if "pose_parser" in pred and "pred" in pred["pose_parser"] else None
@@ -152,11 +157,13 @@ class CoNR():
         pred[shader_stage].update({
             "x_reference_rgb_a_sudp": x_reference_rgb_a_sudp,
         })
-
-        from_encoder = pred["parser"]["encoder"]
+        if shader_stage_last in pred:
+            from_last = pred[shader_stage_last]["y_msg"]
+        else:
+            from_last = pred["parser"]["encoder"]
 
         retdic = self.cinnnet(x_target_sudp_a.detach(), torch.cat(
-            (x_reference_rgb_a_sudp, from_encoder), dim=2))
+            (x_reference_rgb_a_sudp, from_last), dim=2))
         pred[shader_stage]["y_msg"] = retdic
         assert (retdic.shape[2] == 64), retdic.shape
 

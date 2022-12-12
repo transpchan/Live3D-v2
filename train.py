@@ -1,6 +1,6 @@
 import argparse
 import os
-import random
+from pathlib import Path
 import time
 from tqdm import tqdm
 from distutils.util import strtobool
@@ -27,14 +27,6 @@ def data_sampler(dataset, shuffle, distributed):
         return torch.utils.data.SequentialSampler(dataset)
 
 
-def set_random_seed(workder_id):
-    print("set seed for worker: ", workder_id)
-    seed = 1234
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
-
 
 def save_output(image_name, inputs_v, d_dir=".", crop=None):
     import cv2
@@ -53,9 +45,10 @@ def save_output(image_name, inputs_v, d_dir=".", crop=None):
                                                                            crop[7], crop[8]:before_resize_scale.shape[1]-crop[9]]
     else:
         output_img = out_render_scale
-    cv2.imwrite(d_dir+"/"+image_name.split(os.sep)[-1]+'.png',
-                output_img
-                )
+    output_path = Path(d_dir) / (image_name.split(os.sep)[-1]+'.png')
+    # make parent dir for it
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    cv2.imwrite(str(output_path), output_img)
 
 
 def test():
@@ -158,17 +151,16 @@ def infer(args, humanflowmodel, image_names_list):
                                                   :, :, :].detach().squeeze().cpu().numpy()
                 pose_images = data["character_images"][0:1,
                                                        :, :, :, :].detach().squeeze().cpu().numpy()
-                np.savez_compressed(args.test_output_dir+"/udp_"+str(
-                    int(data["imidx"][0].cpu().item())), udp=udp_pred,
-                    udp_gt=udp_gt, img=pose_images)
+                output_dir = Path(args.test_output_dir)/"udp_" + \
+                        str(int(data["imidx"][0].cpu().item()))
+                output_dir.mkdir(parents=True, exist_ok=True)
+                np.savez_compressed(str(output_dir), udp=udp_pred,
+                                        udp_gt=udp_gt, img=pose_images)
 
 
 def build_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--world_size", type=int, default=1,
-                        help='world size')
-    parser.add_argument("--local_rank", type=int, default=0,
-                        help='local_rank, DON\'T change it')
+
 
     parser.add_argument('--test_pose_use_parser_udp',
                         type=strtobool, default=False,
@@ -212,6 +204,11 @@ def build_args():
 
     args = parser.parse_args()
 
+    args.local_rank = int(
+        os.environ['LOCAL_RANK']) if 'LOCAL_RANK' in os.environ else 0
+    args.world_size = int(
+        os.environ['WORLD_SIZE']) if 'WORLD_SIZE' in os.environ else 0
+    print("world_size:", args.world_size, flush=True)
     args.distributed = (args.world_size > 1)
     print("batch_size:", args.batch_size, flush=True)
     if args.distributed:
