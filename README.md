@@ -2,9 +2,9 @@
 
 Neural Rendering with Attention: An Incremental Improvement for Anime Character Animation
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) EN](https://colab.research.google.com/github/transpchan/Live3D-v2/blob/main/notebook.ipynb) |
 [Draft] | 
 [Code](https://github.com/transpchan/Live3D-v2/) |
-[Email](mailto:transpchan@gmail.com) |
 [Discord](https://discord.gg/Md3cykbn36) |
 [Twitter](https://twitter.com/transpchan) |
 [Bilibili](https://space.bilibili.com/6418569) |
@@ -15,7 +15,7 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 
 <i>2022/08</i> @transpchan was kicked out from the authors of  [Live3Dv1](https://github.com/transpchan/Live3D) as I refused to continue submittion after seeing the [heart-breaking reviews](https://github.com/transpchan/Live3D) from ECCV22. 
 
-**Call for Authors/Contributors: Please contact me if you are willing to be the author of the paper of v2 and future versions, if you are familiar with academic journals or conferences.  Pull requests are also welcome!!**
+**Call for Authors/Contributors: Please contact me if you are willing to be the author of the paper of v2 and future versions, or if you are willing to sponsor furher research.  Pull requests are also welcome!!**
 
 <i>2022/10</i> Live3Dv2 is released. Changes are (1) dropping the ResNet50 encoder (2) adding self-attention to the U-Net (3) tuning the hyper-parameters of the networks.
 
