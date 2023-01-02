@@ -153,7 +153,7 @@ def infer(args, humanflowmodel, image_names_list):
                                                        :, :, :, :].detach().squeeze().cpu().numpy()
                 output_dir = Path(args.test_output_dir)/("udp_" + \
                         str(int(data["imidx"][0].cpu().item()))+".npz")
-                output_dir.mkdir(parents=True, exist_ok=True)
+                output_dir.parent.mkdir(parents=True, exist_ok=True)
                 np.savez_compressed(str(output_dir), udp=udp_pred,
                                         udp_gt=udp_gt, img=pose_images)
 
