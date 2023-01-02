@@ -151,8 +151,8 @@ def infer(args, humanflowmodel, image_names_list):
                                                   :, :, :].detach().squeeze().cpu().numpy()
                 pose_images = data["character_images"][0:1,
                                                        :, :, :, :].detach().squeeze().cpu().numpy()
-                output_dir = Path(args.test_output_dir)/"udp_" + \
-                        str(int(data["imidx"][0].cpu().item()))
+                output_dir = Path(args.test_output_dir)/("udp_" + \
+                        str(int(data["imidx"][0].cpu().item()))+".npz")
                 output_dir.mkdir(parents=True, exist_ok=True)
                 np.savez_compressed(str(output_dir), udp=udp_pred,
                                         udp_gt=udp_gt, img=pose_images)
@@ -160,14 +160,11 @@ def infer(args, humanflowmodel, image_names_list):
 
 def build_args():
     parser = argparse.ArgumentParser()
-
-
     parser.add_argument('--test_pose_use_parser_udp',
                         type=strtobool, default=False,
                         help='Whether to use UDP detector to generate UDP from pngs, \
                               pose input MUST be pose images instead of UDP sequences \
                               while True')
-
     parser.add_argument('--dataloader_imgsize', type=int, default=256,
                         help='Input image size of the model')
 
