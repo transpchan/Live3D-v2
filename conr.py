@@ -230,7 +230,7 @@ class CoNR():
             (num_samples * num_pose_images, encoder_out.shape[2], encoder_out.shape[3], encoder_out.shape[4])))
         udp_out = udp_out_fchw.view(
             (num_samples, num_pose_images, udp_out_fchw.shape[1], udp_out_fchw.shape[2], udp_out_fchw.shape[3]))
-
+        pred["pose_parser"] = {}
         pred["pose_parser"]["sc_preds"] = UDPClip(udp_out)
 
         pred["pose_parser"]["pred"] = UDPClip(
