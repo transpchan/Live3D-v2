@@ -123,11 +123,14 @@ class CoNR():
         if shader_target_a is None:
             shader_target_a = pred["pose_parser"]["pred"][:, 3:4, :, :]
 
-        x_target_sudp_a = torch.cat((
-            shader_target_sudp*shader_target_a,
-            shader_target_a
-        ), 1)
-
+        if shader_stage_last in pred:
+            x_target_sudp_a = pred[shader_stage_last]["y_weighted_warp_decoded_rgba"]
+        else:
+            x_target_sudp_a = torch.cat((
+                shader_target_sudp*shader_target_a,
+                shader_target_a
+            ), 1)
+        
         pred[shader_stage].update({
             "x_target_sudp_a": x_target_sudp_a
         })
@@ -136,7 +139,7 @@ class CoNR():
 
         character_images_rgb_nmchw, num_character_images = data[
             "character_images"], data["num_character_images"]
-
+        
         character_a_nmchw = data["character_masks"]
         if torch.any(torch.mean(character_a_nmchw, (0, 2, 3, 4)) > 0.95):
             raise ValueError(
@@ -166,10 +169,10 @@ class CoNR():
             (x_reference_rgb_a_sudp, from_last), dim=2))
         pred[shader_stage]["y_msg"] = retdic
         assert (retdic.shape[2] == 64), retdic.shape
-
+        
         cont = torch.softmax(retdic[:, :, 0:1, :, :], dim=1)
         y_weighted_msg = torch.sum(
-            retdic * cont, dim=1)
+                retdic * cont, dim=1)
 
         dec_out = self.rgbadecodernet(y_weighted_msg)
         y_weighted_RGB = dec_out[:, 0:3, :, :]
@@ -181,7 +184,7 @@ class CoNR():
         assert(y_weighted_warp_decoded_rgba.shape[1] == 4)
         assert(
             y_weighted_warp_decoded_rgba.shape[-1] == character_images_rgb_nmchw.shape[-1])
-
+        
         pred[shader_stage]["y_weighted_warp_decoded_rgba"] = y_weighted_warp_decoded_rgba
 
         return pred

@@ -1,10 +1,11 @@
-# Live3D v2.2 (AttNR) 
+# Live3D v2.3 (AttNR) 
 
 Neural Rendering with Attention: An Incremental Improvement for Anime Character Animation
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) EN](https://colab.research.google.com/github/transpchan/Live3D-v2/blob/main/notebook.ipynb) |
 [Draft] | 
-[Code](https://github.com/transpchan/Live3D-v2/) |
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7501321.svg)](https://doi.org/10.5281/zenodo.7501321) |
+[Code](https://github.com/transpchan/Live3D-v2/)  |
 [Discord](https://discord.gg/Md3cykbn36) |
 [Twitter](https://twitter.com/transpchan) |
 [Bilibili](https://space.bilibili.com/6418569) |
