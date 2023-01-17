@@ -52,30 +52,17 @@ def save_output(image_name, inputs_v, d_dir=".", crop=None):
 
 
 def test():
-
-    source_names_list = []
-    for name in os.listdir(args.test_input_person_images):
-        thissource = os.path.join(args.test_input_person_images, name)
-        if os.path.isfile(thissource):
-            source_names_list.append([thissource])
-        if os.path.isdir(thissource):
-            toadd = [os.path.join(thissource, this_file)
-                     for this_file in os.listdir(thissource)]
-            if (toadd != []):
-                source_names_list.append(toadd)
-            else:
-                print("skipping empty folder :"+thissource)
+    source_names_list = sorted([str(each) for each in Path(args.test_input_person_images).rglob('*.[PpWw][NnEe][GgBb]*')])
+    print("character sheet:", source_names_list)
+    
     image_names_list = []
+    for name in sorted(os.listdir(args.test_input_poses_images)):
+        thistarget = os.path.join(args.test_input_poses_images, name)
+        if os.path.isfile(thistarget):
+            image_names_list.append([thistarget, *source_names_list])
+        if os.path.isdir(thistarget):
+            print("skipping folder :"+thistarget)
 
-    for eachlist in source_names_list:
-        for name in sorted(os.listdir(args.test_input_poses_images)):
-            thistarget = os.path.join(args.test_input_poses_images, name)
-            if os.path.isfile(thistarget):
-                image_names_list.append([thistarget, *eachlist])
-            if os.path.isdir(thistarget):
-                print("skipping folder :"+thistarget)
-
-    print("---building models...")
     humanflowmodel = CoNR(args)
     humanflowmodel.load_model(path=args.test_checkpoint_dir)
     humanflowmodel.dist()
