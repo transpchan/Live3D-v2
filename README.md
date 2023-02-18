@@ -2,9 +2,9 @@
 
 Neural Rendering with Attention: An Incremental Improvement for Anime Character Animation
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg) EN](https://colab.research.google.com/github/transpchan/Live3D-v2/blob/main/notebook.ipynb) |
-[Draft] | 
-[Code](https://github.com/transpchan/Live3D-v2/) |
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/transpchan/Live3D-v2/blob/main/notebook.ipynb) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7652719.svg)](https://doi.org/10.5281/zenodo.7652719) [![Download](https://img.shields.io/badge/Download-Windows-green.svg)](https://github.com/transpchan/Live3D-v2/releases/windows) [![Code](https://img.shields.io/badge/Code-GPLv3-green.svg)](https://github.com/transpchan/Live3D-v2/) 
+
+ [一键启动Windows懒人包](https://github.com/transpchan/Live3D-v2/releases/windows) |
 [Discord](https://discord.gg/Md3cykbn36) |
 [Twitter](https://twitter.com/transpchan) |
 [Bilibili](https://space.bilibili.com/6418569) |
@@ -42,5 +42,6 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 **[Demo3] [Generate 3D point cloud from drawings](https://transpchan.github.io/live3d/#demo3)**
 
 [![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/3.gif)](https://transpchan.github.io/live3d)
+
 
 ![visitor](https://count.getloli.com/get/@live3d?theme=gelbooru)

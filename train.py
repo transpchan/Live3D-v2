@@ -157,23 +157,23 @@ def build_args():
 
     parser.add_argument('--batch_size', type=int, default=1,
                         help='minibatch size')
-    parser.add_argument('--dataloaders', type=int, default=2,
+    parser.add_argument('--dataloaders', type=int, default=0,
                         help='Num of dataloaders')
 
     parser.add_argument('--mode', default="test", choices=['train', 'test'],
                         help='Training mode or Testing mode')
 
     parser.add_argument('--test_input_person_images',
-                        type=str, default="./test_data/test_images/",
+                        type=str, default="./character_sheet/",
                         help='Directory to input character sheets')
     parser.add_argument('--test_input_poses_images', type=str,
-                        default="./test_data/test_poses_images/",
+                        default="./poses/",
                         help='Directory to input UDP sequences or pose images')
     parser.add_argument('--test_checkpoint_dir', type=str,
-                        default=None,
+                        default="./weights/",
                         help='Directory to model weights')
     parser.add_argument('--test_output_dir', type=str,
-                        default="./saved_models/resu2/images/test/",
+                        default="./results/",
                         help='Directory to output images')
     parser.add_argument('--test_rnn_iterate_on_last_frames',
                         type=int, default=0)
