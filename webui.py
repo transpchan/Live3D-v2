@@ -1,16 +1,6 @@
 # Copyright 2023 (c) Live3D-v2 transpchan.
 
-# Licensed under the GPL License, Version 3.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-# http://www.gnu.org/licenses/gpl-3.0.html
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-#  Do NOT remove copyright notice when redistributing or reusing this GUI for other purposes.
+# ONLY USE THIS GUI FOR Live3D-v2. 
 
 import gradio as gr
 import os
@@ -19,30 +9,29 @@ import shutil
 from pathlib import Path
 import subprocess
 if __name__ == "__main__":
-    langdata = {"NO_CHAR_SHEET": ["## Please select at least two character design sheets", "## 请选择至少两张角色设计图"],
-                "NO_UDP": ["## MMD2UDP plugin fails to run, check if your .vmd or .pmx files are correct.", "## MMD2UDP插件运行失败，请检查您的.vmd或.pmx文件是否正确"],
-                "NO_PMX": ["## Please select a .zip file containing PMX mesh", "## 请选择一个包含 PMX模型 的.zip 文件"],
-                "NO_MOTION": ["## Please select a MMD motion file .vmd", "## 请选择一个MMD动作文件.vmd"],
-                "NO_CAMERA": ["## Please select a MMD camera file .vmd", "## 请选择一个MMD相机文件.vmd"],
-                "MMD2UDP_FAIL": ["## MMD2UDP plugin fails to run, check if your .vmd or .pmx files are correct.", "## MMD2UDP插件运行失败，请检查您的.vmd或.pmx文件是否正确"],
-                "GEN_FAIL": ["## An error occurs during video generation process. Please post the full command line to https://github.com/transpchan/Live3D-v2/issues.", "## 在视频生成过程中发生错误。请将完整的命令行发布到https://github.com/transpchan/Live3D-v2/issues."],
-                "CONV_FAIL": ["## An error occurs during video conversion process. Please post the full command line to https://github.com/transpchan/Live3D-v2/issues.", "## 在视频转换过程中发生错误。请将完整的命令行发布到 https://github.com/transpchan/Live3D-v2/issues."],
-                "DONE": ["## Done! There is also a output_adobe_premiere.mov with transparent background in the folder. Please include our link github.com/transpchan/Live3D-v2 when sharing the video.", "## 完成！文件夹中还有一个output_adobe_premiere.mov，是透明背景的视频。根据中国大陆的AIGC相关法律法规，本程序生成视频需要在醒目位置增加水印。使用者检查生成结果并对其负责"],
-                
-                "SELECT_CHAR_SHEET": ["Select at least two .PNG files with transparent background", "选择至少两张透明背景的.PNG文件"],
-
-                "SELECT_PMX": ["Select a .zip file containing a MMD mesh (.pmx) file and texture files", "选择一个包含MMD模型(.pmx)文件和纹理文件的.zip文件"],
-                "SELECT_MOTION": ["Select a MMD motion file .vmd", "选择一个MMD动作文件.vmd"],
-                "SELECT_CAMERA": ["Select a MMD camera file .vmd", "选择一个MMD相机文件.vmd"],
-                "RUN": ["Run", "运行"],
-                "EXAMPLE": ["### Example (select to run)", "### 例子（点击运行）"],
-                "UDP_POINTCLOUD": ["UDP Pointcloud Generation", "UDP点云生成"],
-                "UDP_POINTCLOUD_DESC": ["## UDP Pointcloud Generation from set of character design images", "## 从一组角色设计图生成UDP点云"],
-                "VIDEO_GEN":["Video Generation", "视频生成"],
-                "VIDEO_GEN_DESC": ["## Animate your hand-drawn character with a MikuMikuDance-covnerted UDP sequence", "## 使用MikuMikuDance转换的UDP序列为手绘角色添加动作"],
-                "COLORIZE_MESH": ["Colorize Mesh", "模型上色"],
-                "COLORIZE_MESH_DESC": ["## Colorize mesh (change skin) using a set of character design sheets. ", "## 使用一组角色设计图为模型上色（更改皮肤）。"],
-                }
+    langdata = {
+        "NO_CHAR_SHEET": ["## Please select at least two character design sheets", "## 请选择至少两张角色设计图"],
+        "NO_UDP": ["## MMD2UDP plugin fails to run, check if your .vmd or .pmx files are correct.", "## MMD2UDP插件运行失败，请检查您的.vmd或.pmx文件是否正确"],
+        "NO_PMX": ["## Please select a .zip file containing PMX mesh", "## 请选择一个包含 PMX模型 的.zip 文件"],
+        "NO_MOTION": ["## Please select a MMD motion file .vmd", "## 请选择一个MMD动作文件.vmd"],
+        "NO_CAMERA": ["## Please select a MMD camera file .vmd", "## 请选择一个MMD相机文件.vmd"],
+        "MMD2UDP_FAIL": ["## MMD2UDP plugin fails to run, check if your .vmd or .pmx files are correct.", "## MMD2UDP插件运行失败，请检查您的.vmd或.pmx文件是否正确"],
+        "GEN_FAIL": ["## An error occurs during video generation process. Please post the full command line to https://github.com/transpchan/Live3D-v2/issues.", "## 在视频生成过程中发生错误。请将完整的命令行发布到https://github.com/transpchan/Live3D-v2/issues."],
+        "CONV_FAIL": ["## An error occurs during video conversion process. Please post the full command line to https://github.com/transpchan/Live3D-v2/issues.", "## 在视频转换过程中发生错误。请将完整的命令行发布到 https://github.com/transpchan/Live3D-v2/issues."],
+        "DONE": ["## Done! There is also a output_adobe_premiere.mov with transparent background in the folder. Please include our link github.com/transpchan/Live3D-v2 when sharing the video.", "## 完成！文件夹中还有一个output_adobe_premiere.mov，是透明背景的视频。根据中国大陆的AIGC相关法律法规，本程序生成视频需要在醒目位置增加水印。使用者检查生成结果并对其负责"],
+        "SELECT_CHAR_SHEET": ["Select at least two .PNG files with transparent background", "选择至少两张透明背景的.PNG文件"],
+        "SELECT_PMX": ["Select a .zip file containing a MMD mesh (.pmx) file and texture files", "选择一个包含MMD模型(.pmx)文件和纹理文件的.zip文件"],
+        "SELECT_MOTION": ["Select a MMD motion file .vmd", "选择一个MMD动作文件.vmd"],
+        "SELECT_CAMERA": ["Select a MMD camera file .vmd", "选择一个MMD相机文件.vmd"],
+        "RUN": ["Run", "运行"],
+        "EXAMPLE": ["Examples (If you can't provide any of the files above, click one of these.)", " 示例（如果您无法提供上述任何文件，请单击其中一个。）"],
+        "UDP_POINTCLOUD": ["UDP Pointcloud Generation", "UDP点云生成"],
+        "UDP_POINTCLOUD_DESC": ["## UDP Pointcloud Generation from set of character design images", "## 从一组角色设计图生成UDP点云"],
+        "VIDEO_GEN": ["Video Generation", "视频生成"],
+        "VIDEO_GEN_DESC": ["## Animate your hand-drawn character with a MikuMikuDance-covnerted UDP sequence", "## 使用MikuMikuDance转换的UDP序列为手绘角色添加动作"],
+        "COLORIZE_MESH": ["Colorize Mesh", "模型上色"],
+        "COLORIZE_MESH_DESC": ["## Colorize mesh (change skin) using a set of character design sheets. ", "## 使用一组角色设计图为模型上色（更改皮肤）。"],
+    }
 
     if len(sys.argv) > 1 and sys.argv[1] == "zh":
         languageid = 1
@@ -123,8 +112,9 @@ if __name__ == "__main__":
 
         return Lang["DONE"], "output.mp4"
 
-
-with gr.Blocks(title="Live3D-v2") as ui:
+with gr.Blocks(title="Live3D-v2",css="#mmd_pmx,#mmd_motion,#mmd_camera {height:70px}"  ) as ui:
+    
+    
     gr.Markdown("## [Live3D-v2](https://github.com/transpchan/Live3D-v2)")
     gr.Markdown(
         " [Live3D-v2](https://github.com/transpchan/Live3D-v2) (Oct. 2022) is an incremental update to the MIT-Licenced CoNR (Jul. 2022). CoNR is also known as [Live3D-v1 public beta](https://github.com/transpchan/Live3D) (Sep. 2021).  Credits:  MMD2UDP plugin by [KurisuMakise004](https://github.com/KurisuMakise004/MMD2UDP). Drawings from MIT-Licenced CoNR. ")
@@ -143,13 +133,14 @@ with gr.Blocks(title="Live3D-v2") as ui:
                 # string input
                 examples = gr.Text(label="UDP_Sequence", visible=False)
                 gr.Markdown(Lang["SELECT_PMX"])
-                mmd_pmx = gr.UploadButton(
+                mmd_pmx = gr.File(elem_id="mmd_pmx",
                     label="Zip (.zip)", file_count="single", file_types=[".zip"])
+
                 gr.Markdown(Lang["SELECT_MOTION"])
-                mmd_motion = gr.UploadButton(
+                mmd_motion = gr.File(elem_id="mmd_motion",
                     label="MMD motion (.vmd)", file_count="single", file_types=[".vmd"])
                 gr.Markdown(Lang["SELECT_CAMERA"])
-                mmd_camera = gr.UploadButton(
+                mmd_camera = gr.File(elem_id="mmd_camera",
                     label="MMD camera (.vmd)", file_count="single", file_types=[".vmd"])
 
                 # os.system("sh download.sh")
