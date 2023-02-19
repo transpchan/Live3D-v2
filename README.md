@@ -43,5 +43,7 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 
 [![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/3.gif)](https://transpchan.github.io/live3d)
 
-
 ![visitor](https://count.getloli.com/get/@live3d?theme=gelbooru)
+
+Demo1 and Demo2 are from Live3D-v1 not from v2. Live3D-v2 is better in the quality, try it yourself. Drawings and character design are taken from the MIT-Licenced CoNR maintained by Megvii. Windows bundle may include third-party binaries that is not distributed with GPLv3.
+

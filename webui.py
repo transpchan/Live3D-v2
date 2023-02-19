@@ -12,9 +12,7 @@ if __name__ == "__main__":
     langdata = {
         "NO_CHAR_SHEET": ["## Please select at least two character design sheets", "## 请选择至少两张角色设计图"],
         "NO_UDP": ["## MMD2UDP plugin fails to run, check if your .vmd or .pmx files are correct.", "## MMD2UDP插件运行失败，请检查您的.vmd或.pmx文件是否正确"],
-        "NO_PMX": ["## Please select a .zip file containing PMX mesh", "## 请选择一个包含 PMX模型 的.zip 文件"],
-        "NO_MOTION": ["## Please select a MMD motion file .vmd", "## 请选择一个MMD动作文件.vmd"],
-        "NO_CAMERA": ["## Please select a MMD camera file .vmd", "## 请选择一个MMD相机文件.vmd"],
+        "NO_PMX": ["## Please select a .zip file containing PMX or FBX mesh", "## 请选择一个包含 PMX或FBX模型 的.zip 文件"],
         "MMD2UDP_FAIL": ["## MMD2UDP plugin fails to run, check if your .vmd or .pmx files are correct.", "## MMD2UDP插件运行失败，请检查您的.vmd或.pmx文件是否正确"],
         "GEN_FAIL": ["## An error occurs during video generation process. Please post the full command line to https://github.com/transpchan/Live3D-v2/issues.", "## 在视频生成过程中发生错误。请将完整的命令行发布到https://github.com/transpchan/Live3D-v2/issues."],
         "CONV_FAIL": ["## An error occurs during video conversion process. Please post the full command line to https://github.com/transpchan/Live3D-v2/issues.", "## 在视频转换过程中发生错误。请将完整的命令行发布到 https://github.com/transpchan/Live3D-v2/issues."],
@@ -22,7 +20,7 @@ if __name__ == "__main__":
         "SELECT_CHAR_SHEET": ["Select at least two .PNG files with transparent background", "选择至少两张透明背景的.PNG文件"],
         "SELECT_PMX": ["Select a .zip file containing a MMD mesh (.pmx) file and texture files", "选择一个包含MMD模型(.pmx)文件和纹理文件的.zip文件"],
         "SELECT_MOTION": ["Select a MMD motion file .vmd", "选择一个MMD动作文件.vmd"],
-        "SELECT_CAMERA": ["Select a MMD camera file .vmd", "选择一个MMD相机文件.vmd"],
+        "SELECT_CAMERA": ["Select a MMD camera file .vmd (Optional)", "选择一个MMD相机文件.vmd（可选）"],
         "RUN": ["Run", "运行"],
         "EXAMPLE": ["Examples (If you can't provide any of the files above, click one of these.)", " 示例（如果您无法提供上述任何文件，请单击其中一个。）"],
         "UDP_POINTCLOUD": ["UDP Pointcloud Generation", "UDP点云生成"],
@@ -78,8 +76,7 @@ if __name__ == "__main__":
                     mmd_motion.seek(0)
                     f.write(mmd_motion.read())
                     mmd_motion.seek(0)
-            else:
-                return Lang["NO_MOTION"], None
+           
             if mmd_camera is not None:
                 with open("./MMD2UDP/camera.vmd", "wb") as f:
                     mmd_camera.seek(0)

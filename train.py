@@ -8,7 +8,24 @@ from distutils.util import strtobool
 import numpy as np
 import torch
 from torch.utils.data import DataLoader
-from torchvision import transforms
+
+class Compose:
+    def __init__(self, transforms):
+        self.transforms = transforms
+
+    def __call__(self, img):
+        for t in self.transforms:
+            img = t(img)
+        return img
+
+    def __repr__(self) -> str:
+        format_string = self.__class__.__name__ + "("
+        for t in self.transforms:
+            format_string += "\n"
+            format_string += f"    {t}"
+        format_string += "\n)"
+        return format_string
+
 
 from data_loader import (FileDataset,
                          RandomResizedCropWithAutoCenteringAndZeroPadding)
@@ -74,7 +91,7 @@ def infer(args, humanflowmodel, image_names_list):
     print("test images: ", len(image_names_list))
     print("---")
     test_dataset = FileDataset(image_names_list=image_names_list,
-                               fg_img_lbl_transform=transforms.Compose([
+                               fg_img_lbl_transform=Compose([
                                    RandomResizedCropWithAutoCenteringAndZeroPadding(
                                        (args.dataloader_imgsize, args.dataloader_imgsize), scale=(1, 1), ratio=(1.0, 1.0), center_jitter=(0.0, 0.0)
                                    )]),
