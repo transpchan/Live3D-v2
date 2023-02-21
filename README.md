@@ -32,16 +32,16 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 
 **[Demo1[^2]] [Generate videos](https://transpchan.github.io/live3d/#demo1)**
 
-[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/1.gif)](https://transpchan.github.io/live3d) [![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/2.gif)](https://transpchan.github.io/live3d)
+[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/1.gif?raw=true)](https://transpchan.github.io/live3d) [![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/2.gif?raw=true)](https://transpchan.github.io/live3d)
 
 
 **[Demo2[^2]]] [Colorize your own model](https://transpchan.github.io/live3d/#demo2)**
 
-[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/4.gif)](https://transpchan.github.io/live3d)
+[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/4.gif?raw=true)](https://transpchan.github.io/live3d)
 
 **[Demo3] [Generate 3D point cloud from drawings](https://transpchan.github.io/live3d/#demo3)**
 
-[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/3.gif)](https://transpchan.github.io/live3d)
+[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/3.gif?raw=true)](https://transpchan.github.io/live3d)
 
 ![visitor](https://count.getloli.com/get/@live3d?theme=gelbooru)
 
