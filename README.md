@@ -16,7 +16,7 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 ### Project history
 
 
-<i>2022/08</i> @transpchan was kicked out from the authors[^1] of  [Live3Dv1](https://github.com/transpchan/Live3D/issues/1#issuecomment-1173902028)  as I refused to continue submittion after seeing the [heart-breaking reviews](https://github.com/transpchan/Live3D) from ECCV22. 
+<i>2022/08</i> @transpchan is no longer author[^1] of  [Live3Dv1 paper](https://github.com/transpchan/Live3D/issues/1#issuecomment-1173902028) . He therefore is no longer involved in the submittion to AAAI, and IJCAI, which is made by other authors alone. 
 
 **Call for Authors/Contributors: Please contact me if you are willing to be the author of the paper of v2 and future versions, or if you are willing to sponsor furher research.  Pull requests are also welcome!!**
 
