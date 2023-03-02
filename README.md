@@ -8,11 +8,11 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
  [一键启动Windows懒人包[^3]](https://github.com/transpchan/Live3D-v2/releases/windows) |
 [Discord](https://discord.gg/Md3cykbn36) |
 [Twitter](https://twitter.com/transpchan) |
-[Youtube (Demo)](https://www.youtube.com/@transpchan) |
+[Youtube (Demo)](https://www.youtube.com/playlist?list=PL7inWxnP31gKeBe2TCDQZIXQpoOTpJgFT) |
 [哔哩哔哩](https://space.bilibili.com/6418569) |
 [知乎（有干货）](https://zhuanlan.zhihu.com/p/565391665)
 
-[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/main.png?raw=true)](https://transpchan.github.io/live3d)
+[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/main.png?raw=true)](https://www.youtube.com/playlist?list=PL7inWxnP31gKeBe2TCDQZIXQpoOTpJgFT)
 
 
 ### Project history
