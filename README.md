@@ -4,11 +4,13 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/transpchan/Live3D-v2/blob/main/notebook.ipynb) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7652719.svg)](https://doi.org/10.5281/zenodo.7652719) [![Download](https://img.shields.io/badge/Download-Windows-green.svg)](https://github.com/transpchan/Live3D-v2/releases/windows) [![Code](https://img.shields.io/badge/Code-GPLv3-green.svg)](https://github.com/transpchan/Live3D-v2/) 
 
+[Windows Bundle[^3]](https://github.com/transpchan/Live3D-v2/releases/windows) |
  [一键启动Windows懒人包[^3]](https://github.com/transpchan/Live3D-v2/releases/windows) |
 [Discord](https://discord.gg/Md3cykbn36) |
 [Twitter](https://twitter.com/transpchan) |
-[Bilibili](https://space.bilibili.com/6418569) |
-[Zhihu](https://zhuanlan.zhihu.com/p/565391665)
+[Youtube (Demo)](https://www.youtube.com/@transpchan) |
+[哔哩哔哩](https://space.bilibili.com/6418569) |
+[知乎（有干货）](https://zhuanlan.zhihu.com/p/565391665)
 
 [![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/main.png?raw=true)](https://transpchan.github.io/live3d)
 
