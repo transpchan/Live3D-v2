@@ -32,18 +32,19 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 ### Try it yourself!
 
 
-**[Demo1[^2]] [Generate videos](https://transpchan.github.io/live3d/#demo1)**
+**[Demo1] Generate videos**
 
-[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/1.gif?raw=true)](https://transpchan.github.io/live3d) [![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/2.gif?raw=true)](https://transpchan.github.io/live3d)
+[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/5.gif?raw=true)](https://github.com/transpchan/Live3D-v2)
+[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/6.gif?raw=true)](https://github.com/transpchan/Live3D-v2)
 
 
-**[Demo2[^2]]] [Colorize your own model](https://transpchan.github.io/live3d/#demo2)**
+**[Demo2[^2]]] Colorize your own model**
 
 [![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/4.gif?raw=true)](https://transpchan.github.io/live3d)
 
-**[Demo3] [Generate 3D point cloud from drawings](https://transpchan.github.io/live3d/#demo3)**
+**[Demo3] Generate 3D point cloud from drawings**
 
-[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/3.gif?raw=true)](https://transpchan.github.io/live3d)
+[![image](https://github.com/transpchan/transpchan.github.io/blob/main/live3d/3.gif?raw=true)](https://github.com/transpchan/Live3D-v2)
 
 ![visitor](https://count.getloli.com/get/@live3d?theme=gelbooru)
 
@@ -51,6 +52,6 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 
 [^1]: Despite the fact that Live3Dv1 was initially  @transpchan 's personal project, and he is the only person who is actually coding and training Live3Dv1
 
-[^2]: Demo1 and Demo2 are from Live3D-v1 not from v2. Live3D-v2 is better in the quality, try it yourself. Drawings and character design are taken from the MIT-Licenced CoNR maintained by Megvii. 
+[^2]: Demo2 is from Live3D-v1 not from v2. Live3D-v2 is better in the quality, try it yourself. Drawings and character design are taken from the MIT-Licenced CoNR maintained by Megvii. 
 
 [^3]:Windows bundle may include third-party binaries that is not distributed with GPLv3. (mostly from conda repo and still open-sourced with other licences)
