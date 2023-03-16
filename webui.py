@@ -8,6 +8,7 @@ import sys
 import shutil
 from pathlib import Path
 import subprocess
+os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 if __name__ == "__main__":
     langdata = {
         "NO_CHAR_SHEET": ["## Please select at least two character design sheets", "## 请选择至少两张角色设计图"],
