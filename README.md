@@ -18,7 +18,7 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 ### Project history
 
 
-<i>2022/08</i> @transpchan is no longer author[^1] of  [Live3Dv1 paper](https://github.com/transpchan/Live3D/issues/1#issuecomment-1173902028) . He therefore is no longer involved in the submittion to AAAI, and IJCAI, which is made by other authors alone. 
+<i>2022/08</i> @transpchan is no longer author[^1] of  [the Live3Dv1 paper](https://github.com/transpchan/Live3D/) [[see CoNR draft]](https://github.com/transpchan/transpchan.github.io/blob/57efe17cdce35cf2c49c8d11ebd9bac108d1ac59/live3d/CoNR.pdf). He is therefore no longer involved in the submittions of Live3Dv1 to AAAI, and IJCAI, which were made by other authors alone. 
 
 **Call for Authors/Contributors: Please contact me if you are willing to be the author of the paper of v2 and future versions, or if you are willing to sponsor furher research.  Pull requests are also welcome!!**
 
@@ -50,7 +50,7 @@ Neural Rendering with Attention: An Incremental Improvement for Anime Character 
 
 
 
-[^1]: Despite the fact that Live3Dv1 was initially  @transpchan 's personal project, and he is the only person who is actually coding and training Live3Dv1
+[^1]: Despite the fact that Live3Dv1 was initially  @transpchan 's personal project, and he is the only person who is actually coding, training, and writing the draft of paper for Live3Dv1.  Other authors did nothing but making one demo video and asking me to change the paper [to make reviewers happy](https://github.com/transpchan/Live3D/issues/1#issuecomment-1173902028). Also, they are not involved in the development of Live3Dv2.
 
 [^2]: Demo2 is from Live3D-v1 not from v2. Live3D-v2 is better in the quality, try it yourself. Drawings and character design are taken from the MIT-Licenced CoNR maintained by Megvii. 
 
